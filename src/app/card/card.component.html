@@ -1,0 +1,54 @@
+<!-- TODO Filters does not remove empty spaces betwwen the elements
+    Set all filters and you'll see empty space on the left side
+    that's dinamicly resized -->
+<div class="sl-card"
+    *ngIf="service.toggler.isVisible(product)">
+    <div class="sl-product-image">
+        <div class="sl-product-bage" [style.background]="product.bage.color">
+            <span>{{product.bage.text}}</span>
+        </div>
+        <figure class="sl-product-gallery">
+            <img class="sl-product-gallery-image"
+                [src]="product.image" (click)="switchImage()" />
+        </figure>
+    </div>
+    <div class="sl-product-company"
+        [title]="product.company">
+        {{product.company | cutter:[40]}}
+    </div>
+    <div class="sl-product-title"
+        [title]="product.title">
+        {{product.title | cutter:[23]}}
+    </div>
+    <div class="sl-product-rating">
+        <p class="sl-product-rating-value">
+            {{product.rating.value}} из 5
+            <span class="sl-product-rating-reviews"
+                [title]="product.rating.reviews | number">
+                {{product.rating.reviews | numeric }} отзывов
+            </span>
+        </p>
+    </div>
+    <div class="sl-product-price">
+        {{product.price.value - getDiscount() | currency:'RUB':'symbol-narrow'}}
+        <span
+            [style.display]="product.price.discount == null ? 'none' : 'inline'">
+            -{{getDiscount() | currency:'RUB':'symbol-narrow'}}
+        </span>
+    </div>
+
+    <div class="sl-card-actions">
+        <button class="sl-card-actions-favorite"
+            [ngClass]="isFavorite ? 'fav' : 'fav-disable'"
+            (click)="switchFavorite()"></button>
+        <button class="sl-card-actions-cart"
+            (click)="service.cart.addToCart(product)"
+            [disabled]="product.deliveryOptions.available == 0">В корзину</button>
+    </div>
+
+    <div class="sl-product-delivery-options">
+        <p>Доставка на дом: <span>{{product.deliveryOptions.delivery}}</span></p>
+        <p>Доставка в постомат: <span>{{product.deliveryOptions.postmate ? 'доступна' : 'недоступна'}}</span></p>
+        <p>В наличии: <span [title]="product.deliveryOptions.available | number">{{product.deliveryOptions.available | numeric}}шт.</span></p>
+    </div>
+</div>

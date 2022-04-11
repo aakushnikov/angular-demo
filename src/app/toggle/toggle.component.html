@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <button type="button" class="btn btn-outline-secondary"
+        *ngIf="!service.toggler.allFiltersReseted()"
+        (click)="service.toggler.resetFilter()">{{RESET_TOGGLES_TITLE}}</button>
+    <button type="button" class="btn btn-outline-success"
+        *ngIf="service.toggler.allFiltersReseted()"
+        (click)="service.toggler.resetFilter()" disabled>{{RESET_TOGGLES_TITLE}}</button>
+    <span *ngFor="let item of service.toggler.filters">
+        <button type="button" class="btn btn-outline-secondary"
+            *ngIf="service.toggler.containsFilter(item)"
+            (click)="service.toggler.setFilter(item)">{{item.label}}</button>
+        <button type="button" class="btn btn-outline-success"
+            *ngIf="service.toggler.checkedFilter(item)" disabled>{{item.label}}</button>
+    </span>
+</div>
+<!--
+<div class="sl-toggle input-group mb-3" *ngFor="let item of toggle">
+    <div class="input-group-text">
+        <button class="btn btn-light" *ngIf="isMainFilter(item)"
+        (click)="setFilter(item)">
+        {{item.label}}
+        </button>
+        <label *ngIf="isVisibleFilter(item)">
+            <input type="checkbox"
+                [title]="item.label"
+                [checked]="item.checked"
+                (click)="setFilter(item)">
+            {{item.label}}
+        </label>
+    </div>
+</div>
+-->

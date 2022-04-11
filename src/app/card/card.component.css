@@ -1,0 +1,236 @@
+/* Rectangle 6 */
+div
+{
+    margin-bottom: 10px;
+}
+
+div.sl-card{
+display: inline-block;
+position: relative;
+width: 300px;
+height: 500px;
+
+background: #FFFFFF;
+box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 6px 8px rgba(0, 0, 0, 0.08);
+border-radius: 8px;
+padding: 10px;
+}
+
+/* image 1 */
+div.sl-product-image
+{
+position: relative;
+width: 250px;
+height: 200px;
+left: 25px;
+}
+
+/* Bage */
+div.sl-product-bage
+{
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 6px 8px;
+text-align: center;
+
+position: absolute;
+width: 125px;
+height: 25px;
+
+background: #FF3366;
+border-radius: 4px;
+}
+
+/* Скидка -17% */
+div.sl-product-bage span
+{
+position: static;
+width: 100%;
+height: 20px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+/* identical to box height, or 125% */
+
+letter-spacing: -0.005em;
+color: #FFFFFF;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+img.sl-product-gallery-image {
+    display: block;
+    max-width: 100%;
+}
+
+/* Google */
+div.sl-product-company
+{
+position: relative;
+width: 100%;
+height: 20px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+letter-spacing: -0.0024em;
+
+color: #8855FF;
+}
+
+/* Google Pixel 4 64GB */
+div.sl-product-title
+{
+position: relative;
+width: 100%;
+height: 32px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+color: #111111;
+}
+
+/* Frame 8 */
+div.sl-product-rating
+{
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: relative;
+width: 100%;
+height: 20px;
+}
+div.sl-product-rating p
+{
+    font-weight: bold;
+}
+div.sl-product-rating span
+{
+    font-weight: normal;
+    color:darkred;
+}
+
+/* 54 990₽ */
+div.sl-product-price
+{
+display: flex;
+position: relative;
+width: 100px;
+height: 28px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height, or 117% */
+
+letter-spacing: -0.005em;
+
+color: #111111;
+}
+
+div.sl-product-price span
+{
+    font-size: xx-small;
+    font-weight: bolder;
+    color: red;
+    vertical-align: super;
+    line-height: 1;
+}
+
+/* Group 6 */
+div.sl-card-actions
+{
+position: absolute;
+width: 100%;
+height: 50px;
+}
+
+/* Frame 16 */
+button.sl-card-actions-favorite
+{
+/* Auto layout */
+align-items: center;
+padding: 8px 12px;
+
+position: absolute;
+width: 48px;
+height: 40px;
+
+background-color: #FFFFFF;
+
+background-repeat: no-repeat;
+background-position: center;
+
+border: 1px solid #DDDDDD;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+button.fav
+{
+    background-image: url('../../assets/images/fav.png');
+    background-size: 71%;
+}
+button.fav-disable
+{
+    background-image: url('../../assets/images/fav-disable.png');
+    background-size: 65%;
+}
+
+
+/* Frame 15 */
+button.sl-card-actions-cart
+{
+/* Auto layout */
+align-items: center;
+text-align: center;
+padding: 12px 20px;
+
+position: absolute;
+left: 50px;
+width: 240px;
+height: 40px;
+
+background: #FFFFFF;
+border: 1px solid #DDDDDD;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+div.sl-product-delivery-options
+{
+    margin-top: 70px;
+    padding-left: 5px;
+    position: relative;
+    width: 100%;
+    font-size: 12pt;
+    line-height: 8px;
+}
+
+div.sl-product-delivery-options span
+{
+    color: navy;
+}
+
